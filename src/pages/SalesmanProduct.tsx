@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Container } from "../components/ui/Container";
 import { Section, Eyebrow } from "../components/ui/Section";
 import { Reveal } from "../components/ui/Reveal";
@@ -46,6 +47,15 @@ export default function SalesmanProduct() {
       <Section className="pt-20 md:pt-28">
         <Container>
           <Reveal>
+            <Link
+              to="/products"
+              className="mb-6 inline-flex items-center gap-1.5 text-sm text-[var(--color-text-dim)] hover:text-[var(--color-text)]"
+            >
+              <ArrowLeft size={14} />
+              A Sonic product
+            </Link>
+          </Reveal>
+          <Reveal delay={40}>
             <Badge>{p.status === "live" ? "Live product" : "In development"}</Badge>
           </Reveal>
           <Reveal delay={80}>

@@ -53,11 +53,27 @@
     transform: translateY(0);
   }
 
+  .signal-pulse {
+    animation: signal-travel 3.5s linear infinite;
+  }
+  @keyframes signal-travel {
+    from {
+      stroke-dashoffset: 220;
+    }
+    to {
+      stroke-dashoffset: -220;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .reveal {
       opacity: 1 !important;
       transform: none !important;
       transition: none !important;
+    }
+    .signal-pulse {
+      animation: none;
+      opacity: 0;
     }
     html {
       scroll-behavior: auto;

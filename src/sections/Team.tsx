@@ -4,22 +4,29 @@ import { Section, Eyebrow } from "../components/ui/Section";
 import { Reveal } from "../components/ui/Reveal";
 import { team } from "../data/team";
 
-export function Founder() {
+export function Team() {
   return (
-    <Section id="founder" className="border-t border-[var(--color-border)]">
+    <Section id="team" className="border-t border-[var(--color-border)]">
       <Container>
         <Reveal>
           <Eyebrow>Team</Eyebrow>
         </Reveal>
         <Reveal delay={80}>
           <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-[var(--color-text)] md:text-4xl">
-            Built by one person, for now.
+            Built by one person today. Hiring is next.
           </h2>
+        </Reveal>
+        <Reveal delay={140}>
+          <p className="mt-5 max-w-xl text-[var(--color-text-muted)]">
+            Sonic is early, and we'd rather say so plainly than pretend
+            otherwise. See the Team path below if building this with us
+            interests you.
+          </p>
         </Reveal>
 
         <div className="mt-12 flex flex-col gap-6">
           {team.map((person, i) => (
-            <Reveal key={person.name} delay={140 + i * 80}>
+            <Reveal key={person.name} delay={200 + i * 80}>
               <div className="flex flex-col items-start gap-5 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:flex-row sm:items-center">
                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-[var(--color-bg)] text-lg font-semibold text-[var(--color-text-muted)]">
                   {person.name.charAt(0)}

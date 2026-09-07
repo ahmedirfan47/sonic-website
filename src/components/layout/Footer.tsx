@@ -15,30 +15,40 @@ export function Footer() {
               SONIC
             </div>
             <p className="mt-3 max-w-xs text-sm text-[var(--color-text-dim)]">
-              AI-operated business systems for operationally complex
-              companies in the GCC.
+              A technology company building AI-operated business
+              infrastructure, starting in the GCC.
             </p>
           </div>
 
           <div>
             <div className="eyebrow mb-4">Company</div>
             <ul className="space-y-2.5">
-              {navLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+              {navLinks
+                .filter((l) => l.href.startsWith("/#"))
+                .map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
             </ul>
           </div>
 
           <div>
             <div className="eyebrow mb-4">Products</div>
             <ul className="space-y-2.5">
+              <li>
+                <Link
+                  to="/products"
+                  className="text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+                >
+                  All products
+                </Link>
+              </li>
               {products.map((p) => (
                 <li key={p.slug}>
                   <Link
@@ -69,7 +79,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-3 border-t border-[var(--color-border)] pt-6 text-xs text-[var(--color-text-dim)] md:flex-row md:items-center md:justify-between">
           <span>© {year} Sonic. All rights reserved.</span>
-          <span>Built for the GCC.</span>
+          <span>Building for the GCC, with a global vision.</span>
         </div>
       </Container>
     </footer>

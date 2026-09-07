@@ -6,35 +6,39 @@ import { Reveal } from "../components/ui/Reveal";
 import { Badge } from "../components/ui/Badge";
 import { flagshipProduct } from "../data/products";
 
-export function ProductShowcase() {
+/**
+ * Brief, clearly-labeled introduction to Sonic's product line on the
+ * homepage. Deliberately short -- the full product story lives on
+ * /products and each product's own page, keeping this section from
+ * competing with the company narrative around it.
+ */
+export function ProductsIntro() {
   const p = flagshipProduct;
 
   return (
     <Section id="products" className="border-t border-[var(--color-border)]">
       <Container>
         <Reveal>
-          <Eyebrow>Product</Eyebrow>
+          <Eyebrow>Sonic's Products</Eyebrow>
+        </Reveal>
+        <Reveal delay={80}>
+          <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-[var(--color-text)] md:text-4xl">
+            One product today. Not the only one we'll build.
+          </h2>
         </Reveal>
 
-        <div className="mt-4 flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div className="mt-14 flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-xl">
-            <Reveal delay={80}>
+            <Reveal delay={140}>
               <div className="flex items-center gap-3">
-                <h2 className="text-3xl font-bold tracking-tight text-[var(--color-text)] md:text-4xl">
+                <h3 className="text-2xl font-bold tracking-tight text-[var(--color-text)]">
                   {p.name}
-                </h2>
+                </h3>
                 <Badge>{p.status === "live" ? "Live" : "In development"}</Badge>
               </div>
             </Reveal>
-            <Reveal delay={140}>
-              <p className="mt-4 text-lg text-[var(--color-text-muted)]">
-                {p.tagline}
-              </p>
-            </Reveal>
             <Reveal delay={200}>
-              <p className="mt-4 text-sm leading-relaxed text-[var(--color-text-dim)]">
-                {p.description}
-              </p>
+              <p className="mt-4 text-[var(--color-text-muted)]">{p.tagline}</p>
             </Reveal>
             <Reveal delay={260}>
               <Link
@@ -47,11 +51,11 @@ export function ProductShowcase() {
             </Reveal>
           </div>
 
-          <Reveal delay={200} className="w-full md:max-w-sm">
+          <Reveal delay={220} className="w-full md:max-w-sm">
             <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
               <div className="eyebrow mb-4">{p.industry}</div>
               <ul className="space-y-3">
-                {p.capabilities.map((cap) => (
+                {p.capabilities.slice(0, 3).map((cap) => (
                   <li key={cap} className="flex items-start gap-2.5 text-sm text-[var(--color-text-muted)]">
                     <Check size={16} className="mt-0.5 shrink-0 text-[var(--color-accent)]" />
                     {cap}
@@ -61,6 +65,16 @@ export function ProductShowcase() {
             </div>
           </Reveal>
         </div>
+
+        <Reveal delay={300}>
+          <Link
+            to="/products"
+            className="mt-10 inline-flex items-center gap-2 text-sm text-[var(--color-text-dim)] hover:text-[var(--color-text)]"
+          >
+            See all Sonic products
+            <ArrowRight size={14} />
+          </Link>
+        </Reveal>
       </Container>
     </Section>
   );

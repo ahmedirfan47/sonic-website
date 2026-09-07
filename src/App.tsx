@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Navbar } from "./components/layout/Navbar";
 import { Footer } from "./components/layout/Footer";
 import Home from "./pages/Home";
+import Products from "./pages/Products";
 import SalesmanProduct from "./pages/SalesmanProduct";
 import NotFound from "./pages/NotFound";
 
@@ -24,6 +25,7 @@ export default function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/salesman" element={<SalesmanProduct />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

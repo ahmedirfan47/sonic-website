@@ -1,22 +1,30 @@
 import { Hero } from "../sections/Hero";
+import { WhatSonicIs } from "../sections/WhatSonicIs";
 import { Problem } from "../sections/Problem";
-import { Solution } from "../sections/Solution";
-import { ProductShowcase } from "../sections/ProductShowcase";
-import { HowItWorks } from "../sections/HowItWorks";
-import { WhoItsFor } from "../sections/WhoItsFor";
-import { Founder } from "../sections/Founder";
+import { Approach } from "../sections/Approach";
+import { Technology } from "../sections/Technology";
+import { ProductsIntro } from "../sections/ProductsIntro";
+import { IndustriesMarket } from "../sections/IndustriesMarket";
+import { VisionMission } from "../sections/VisionMission";
+import { Story } from "../sections/Story";
+import { Team } from "../sections/Team";
+import { Engage } from "../sections/Engage";
 import { ContactCTA } from "../sections/ContactCTA";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <WhatSonicIs />
       <Problem />
-      <Solution />
-      <ProductShowcase />
-      <HowItWorks />
-      <WhoItsFor />
-      <Founder />
+      <Approach />
+      <Technology />
+      <ProductsIntro />
+      <IndustriesMarket />
+      <VisionMission />
+      <Story />
+      <Team />
+      <Engage />
       <ContactCTA />
     </>
   );

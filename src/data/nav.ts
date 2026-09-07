@@ -3,14 +3,14 @@ export interface NavLink {
   href: string;
 }
 
-/** Top nav links -- anchors on the homepage, since Sonic is currently a
- * single deep page rather than many thin ones. Add real routes here if
- * dedicated pages are introduced later. */
+/** Top nav -- company-first ordering. Anchors point at homepage sections;
+ * "Products" is a real route since it's meant to grow into a full index. */
 export const navLinks: NavLink[] = [
-  { label: "Problem", href: "/#problem" },
-  { label: "Salesman", href: "/salesman" },
+  { label: "Company", href: "/#company" },
   { label: "Technology", href: "/#technology" },
-  { label: "Founder", href: "/#founder" },
+  { label: "Products", href: "/products" },
+  { label: "Industries", href: "/#industries" },
+  { label: "Team", href: "/#team" },
 ];
 
 export const ctaLabel = "Talk to Sonic";
