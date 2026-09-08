@@ -17,7 +17,7 @@ export function Problem() {
         </Reveal>
         <Reveal delay={80}>
           <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-[var(--color-text)] md:text-4xl">
-            Distribution, wholesale, and logistics still run by hand.
+            Distribution, wholesale and logistics still run by hand.
           </h2>
         </Reveal>
 

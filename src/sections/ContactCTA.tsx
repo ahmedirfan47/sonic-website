@@ -46,7 +46,7 @@ export function ContactCTA() {
             <Reveal delay={140}>
               <p className="mt-5 max-w-md text-[var(--color-text-muted)]">
                 Whether you're running a business, exploring a partnership,
-                considering an investment, or want to help build what's
+                considering an investment or want to help build what's
                 next -- we read every message and respond directly.
               </p>
             </Reveal>

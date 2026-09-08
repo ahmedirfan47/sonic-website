@@ -42,7 +42,7 @@ export function Hero() {
           <Reveal delay={240}>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Button as="a" href="/#contact">
-                Talk to Sonic
+                Contact Us
                 <ArrowRight size={16} />
               </Button>
               <Button as="a" href="/products" variant="ghost">

@@ -145,14 +145,14 @@ export interface EngagePath {
 export const engagePaths: EngagePath[] = [
   {
     audience: "Businesses",
-        headline: "Running a distribution, wholesale, or logistics operation",
-    body: "If your operation runs on WhatsApp, spreadsheets, and memory, talk to Sonic about what Salesman can take off your plate.",
+        headline: "Running a distribution, wholesale or logistics operation",
+    body: "If your operation runs on WhatsApp, spreadsheets and memory, talk to Sonic about what Salesman can take off your plate.",
     cta: "Talk to Sonic",
   },
   {
     audience: "Partners",
     headline: "Distributing or reselling into the GCC",
-    body: "If you work with businesses in distribution, wholesale, or retail across the region, Sonic is open to partnerships that bring intelligent operations to more businesses.",
+    body: "If you work with businesses in distribution, wholesale or retail across the region, Sonic is open to partnerships that bring intelligent operations to more businesses.",
     cta: "Discuss a partnership",
   },
   {
@@ -170,7 +170,7 @@ export const engagePaths: EngagePath[] = [
 ];
 
 export const storyParagraphs: string[] = [
-  "Sonic started with a direct observation, not a market report: a wholesale business in Saudi Arabia was running entirely on WhatsApp messages, a price list in someone's memory, and a driver who knew his deliveries by heart. It worked -- until it didn't scale, until stock went untracked, until nobody could say for certain what had been promised to whom.",
-  "That specific problem became Salesman: a system that keeps the conversation businesses already have with their customers, and puts real software behind it -- real prices, real stock, real delivery assignment, a real audit trail.",
-  "Sonic exists to generalize that same discipline -- AI as infrastructure, data as the source of truth, software that runs the operation instead of reporting on it -- across the operationally complex businesses that make up so much of the GCC economy, and eventually beyond it.",
+  "Sonic started with a direct observation, not a market report: a wholesale business in Saudi Arabia was running entirely on WhatsApp messages, a price list in someone's memory and a driver who knew his deliveries by heart. It worked -- until it didn't scale, until stock went untracked, until nobody could say for certain what had been promised to whom.",
+  "That specific problem became Salesman: a system that keeps the conversation businesses already have with their customers and puts real software behind it -- real prices, real stock, real delivery assignment, a real audit trail.",
+  "Sonic exists to generalize that same discipline -- AI as infrastructure, data as the source of truth, software that runs the operation instead of reporting on it -- across the operationally complex businesses that make up so much of the GCC economy and eventually beyond it.",
 ];
