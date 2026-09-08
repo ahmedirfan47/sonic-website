@@ -70,11 +70,11 @@ export default function Products() {
             {/* Placeholder card signaling more is coming, without inventing a product */}
             <Reveal delay={products.length * 100}>
               <div className="flex h-full flex-col items-start justify-center rounded-2xl border border-dashed border-[var(--color-border-strong)] p-7">
-                <div className="eyebrow mb-2">In Progress</div>
+                                <div className="eyebrow mb-2">What's Next</div>
                 <p className="text-sm text-[var(--color-text-muted)]">
-                  Sonic is a product company, not a one-product company. What
-                  comes after Salesman is being shaped by what we learn from
-                  the businesses running on it today.
+                  Each new Sonic product applies the same infrastructure to a
+                  new industry. What comes after Salesman is being shaped by
+                  what we're learning from the businesses running on it now.
                 </p>
               </div>
             </Reveal>

@@ -21,9 +21,9 @@ export function ProductsIntro() {
         <Reveal>
           <Eyebrow>Sonic's Products</Eyebrow>
         </Reveal>
-        <Reveal delay={80}>
+             <Reveal delay={80}>
           <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-[var(--color-text)] md:text-4xl">
-            One product today. Not the only one we'll build.
+            The first application of Sonic's infrastructure.
           </h2>
         </Reveal>
 

@@ -145,7 +145,7 @@ export interface EngagePath {
 export const engagePaths: EngagePath[] = [
   {
     audience: "Businesses",
-    headline: "Running an operationally complex business",
+        headline: "Running a distribution, wholesale, or logistics operation",
     body: "If your operation runs on WhatsApp, spreadsheets, and memory, talk to Sonic about what Salesman can take off your plate.",
     cta: "Talk to Sonic",
   },

@@ -21,21 +21,21 @@ export function Hero() {
       <Container className="relative grid gap-14 md:grid-cols-[1.1fr_0.9fr] md:items-center">
         <div>
           <Reveal>
-            <Badge>A technology company, not a single product</Badge>
+            <Badge>Intelligent business infrastructure</Badge>
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-6 max-w-xl text-4xl font-bold leading-[1.1] tracking-tight text-[var(--color-text)] md:text-6xl">
-              Sonic builds intelligent infrastructure for operationally complex businesses.
+            <h1 className="mt-6 max-w-xl text-4xl font-bold leading-[1.08] tracking-tight text-[var(--color-text)] md:text-6xl">
+              Software that runs the operation. Not software that reports on it.
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-[var(--color-text-muted)]">
-              We build AI-operated systems that run business operations
-              directly -- not software that reports on them after the fact.
-              Our first product, Salesman, does this for wholesale
-              distribution in the GCC.
+              Sonic builds AI-operated systems for businesses too complex to
+              run on spreadsheets and too fast-moving to run on memory.
+              Salesman, our first product, does this for wholesale
+              distribution across the GCC.
             </p>
           </Reveal>
 
