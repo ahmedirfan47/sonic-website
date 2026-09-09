@@ -1,12 +1,13 @@
+import { ArrowRight } from "lucide-react";
 import { Container } from "../components/ui/Container";
 import { Section, Eyebrow } from "../components/ui/Section";
 import { Reveal } from "../components/ui/Reveal";
-import { beliefs } from "../data/company";
+import { beliefs, workProcess } from "../data/company";
 
 /**
  * Vertical, editorial manifesto list -- large type, generous rhythm, no
- * boxes. Deliberately distinct from the boxed-card treatment used in
- * Problem and Technology, so the page doesn't read as one repeated pattern.
+ * boxes. A compact "how we work" process strip follows, keeping the
+ * industry-agnostic positioning integrated here rather than a new section.
  */
 export function Approach() {
   return (
@@ -24,8 +25,8 @@ export function Approach() {
         <div className="mt-16 divide-y divide-[var(--color-border)]">
           {beliefs.map((belief, i) => (
             <Reveal key={belief.title} delay={140 + i * 90}>
-              <div className="flex flex-col gap-3 py-8 sm:flex-row sm:gap-10">
-                <div className="shrink-0 font-mono text-2xl text-[var(--color-accent)] sm:w-16">
+              <div className="group flex flex-col gap-3 rounded-xl py-8 transition-colors duration-200 hover:bg-[var(--color-surface)] sm:flex-row sm:gap-10 sm:px-4">
+                <div className="shrink-0 font-mono text-2xl text-[var(--color-accent)] transition-transform duration-200 group-hover:translate-x-1 sm:w-16">
                   {String(i + 1).padStart(2, "0")}
                 </div>
                 <div>
@@ -40,6 +41,20 @@ export function Approach() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={140 + beliefs.length * 90}>
+          <div className="mt-16 flex flex-wrap items-center gap-x-3 gap-y-3 border-t border-[var(--color-border)] pt-10">
+            <span className="eyebrow mr-1">How we work</span>
+            {workProcess.map((step, i) => (
+              <span key={step.label} className="flex items-center gap-3">
+                <span className="text-sm font-medium text-[var(--color-text)]">{step.label}</span>
+                {i < workProcess.length - 1 && (
+                  <ArrowRight size={14} className="text-[var(--color-text-dim)]" />
+                )}
+              </span>
+            ))}
+          </div>
+        </Reveal>
       </Container>
     </Section>
   );

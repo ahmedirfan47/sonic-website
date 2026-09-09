@@ -5,10 +5,10 @@
  */
 
 export const mission =
-  "To replace the manual, disconnected operations that run operationally complex businesses -- WhatsApp threads, spreadsheets, phone calls, memory -- with software that runs those operations directly.";
+  "To help businesses build, automate, and grow -- combining technology, AI, and business strategy to solve the operational and growth challenges holding them back, whatever industry they're in.";
 
 export const vision =
-  "A future where every operationally complex business -- distribution, retail, logistics, wholesale, and beyond -- runs on intelligent systems built for how it actually operates, starting in the GCC and extending globally.";
+  "A future where any business, in any industry, has access to the kind of technology and strategic thinking usually reserved for the largest companies -- proven first with the operationally complex businesses of the GCC, and extending globally.";
 
 export interface ProblemPoint {
   title: string;
@@ -56,8 +56,12 @@ export interface Belief {
 }
 
 /** Sonic's operating philosophy -- what the company believes, independent of
- * any specific product's feature set. */
+ * any specific product's feature set or industry. */
 export const beliefs: Belief[] = [
+  {
+    title: "Strategy comes before software",
+    body: "Understanding a business's real constraints and growth opportunities has to come first. Sonic works as a strategic partner before it works as a software builder -- the technology follows from that understanding, not the other way around.",
+  },
   {
     title: "Software should run the operation, not just report on it",
     body: "Sonic builds systems that take the order, check the real stock, assign the real driver -- not systems that wait for a human to do the work and then log it.",
@@ -70,10 +74,19 @@ export const beliefs: Belief[] = [
     title: "The database owns every fact. The model never guesses.",
     body: "A language model can converse, reason, and decide what to look up. It should never be the source of a price, a stock count, or an order status -- that discipline is what makes an AI system trustworthy enough to run a real business.",
   },
-  {
-    title: "Meet businesses where they already operate",
-    body: "In the GCC, that's WhatsApp -- not a new portal, not an app nobody opens. Sonic builds software behind the interface that already works, rather than asking a business to adopt a different one.",
-  },
+];
+
+export interface ProcessStep {
+  label: string;
+}
+
+/** The consistent process Sonic applies to any business, regardless of
+ * industry -- shown as a compact strip alongside the beliefs above. */
+export const workProcess: ProcessStep[] = [
+  { label: "Understand the business" },
+  { label: "Identify the opportunity" },
+  { label: "Build and automate" },
+  { label: "Scale what works" },
 ];
 
 export interface TechPillar {
@@ -106,11 +119,14 @@ export interface IndustryFocus {
   body: string;
 }
 
+export const industriesIntro =
+  "Sonic's approach isn't tied to one sector. If a business has real operational complexity or real growth ambition, the same process -- understand, identify, build, scale -- applies. These are simply where we've proven it first.";
+
 export const industries: IndustryFocus[] = [
   {
     name: "Distribution & Wholesale",
     status: "current",
-    body: "Businesses selling a defined catalog to repeat B2B customers, coordinating delivery across a fleet -- the first operational shape Sonic is built for, proven with Salesman.",
+    body: "Businesses selling a defined catalog to repeat B2B customers, coordinating delivery across a fleet -- proven with Salesman, our first product.",
   },
   {
     name: "FMCG",
@@ -145,14 +161,14 @@ export interface EngagePath {
 export const engagePaths: EngagePath[] = [
   {
     audience: "Businesses",
-        headline: "Running a distribution, wholesale or logistics operation",
-    body: "If your operation runs on WhatsApp, spreadsheets and memory, talk to Sonic about what Salesman can take off your plate.",
+    headline: "Ready to build, automate, or grow",
+    body: "Whether you need a specific system like Salesman or a broader technology and growth partner, talk to Sonic about what's actually holding your business back -- whatever industry you're in.",
     cta: "Talk to Sonic",
   },
   {
     audience: "Partners",
     headline: "Distributing or reselling into the GCC",
-    body: "If you work with businesses in distribution, wholesale or retail across the region, Sonic is open to partnerships that bring intelligent operations to more businesses.",
+    body: "If you work with businesses in distribution, wholesale, or retail across the region, Sonic is open to partnerships that bring intelligent operations to more businesses.",
     cta: "Discuss a partnership",
   },
   {
@@ -170,7 +186,7 @@ export const engagePaths: EngagePath[] = [
 ];
 
 export const storyParagraphs: string[] = [
-  "Sonic started with a direct observation, not a market report: a wholesale business in Saudi Arabia was running entirely on WhatsApp messages, a price list in someone's memory and a driver who knew his deliveries by heart. It worked -- until it didn't scale, until stock went untracked, until nobody could say for certain what had been promised to whom.",
-  "That specific problem became Salesman: a system that keeps the conversation businesses already have with their customers and puts real software behind it -- real prices, real stock, real delivery assignment, a real audit trail.",
-  "Sonic exists to generalize that same discipline -- AI as infrastructure, data as the source of truth, software that runs the operation instead of reporting on it -- across the operationally complex businesses that make up so much of the GCC economy and eventually beyond it.",
+  "Sonic started with a direct observation, not a market report: a wholesale business in Saudi Arabia was running entirely on WhatsApp messages, a price list in someone's memory, and a driver who knew his deliveries by heart. It worked -- until it didn't scale, until stock went untracked, until nobody could say for certain what had been promised to whom.",
+  "That specific problem became Salesman: a system that keeps the conversation businesses already have with their customers, and puts real software behind it -- real prices, real stock, real delivery assignment, a real audit trail.",
+  "Sonic exists to generalize that same discipline -- AI as infrastructure, data as the source of truth, software that runs the operation instead of reporting on it -- across any business willing to combine real strategy with real technology, starting in the GCC and extending globally.",
 ];

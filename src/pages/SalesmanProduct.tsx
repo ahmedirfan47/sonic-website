@@ -77,7 +77,7 @@ export default function SalesmanProduct() {
             <div className="mt-8">
               <Button as="a" href="/#contact">
                 Talk to Sonic about Salesman
-                <ArrowRight size={16} />
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </Reveal>
@@ -155,7 +155,7 @@ export default function SalesmanProduct() {
             <div className="mt-8 flex justify-center">
               <Button as="a" href="/#contact">
                 Talk to Sonic
-                <ArrowRight size={16} />
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </Reveal>

@@ -41,7 +41,7 @@ export default function Products() {
               <Reveal key={p.slug} delay={i * 100}>
                 <Link
                   to={`/${p.slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-7 transition-colors hover:border-[var(--color-accent)]/50"
+                  className="card-hover group flex h-full flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-7 hover:border-[var(--color-accent)]/50"
                 >
                   <div className="flex items-center gap-3">
                     <h2 className="text-xl font-bold text-[var(--color-text)]">{p.name}</h2>
@@ -70,7 +70,7 @@ export default function Products() {
             {/* Placeholder card signaling more is coming, without inventing a product */}
             <Reveal delay={products.length * 100}>
               <div className="flex h-full flex-col items-start justify-center rounded-2xl border border-dashed border-[var(--color-border-strong)] p-7">
-                                <div className="eyebrow mb-2">What's Next</div>
+                <div className="eyebrow mb-2">What's Next</div>
                 <p className="text-sm text-[var(--color-text-muted)]">
                   Each new Sonic product applies the same infrastructure to a
                   new industry. What comes after Salesman is being shaped by

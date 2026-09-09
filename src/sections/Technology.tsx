@@ -31,8 +31,8 @@ export function Technology() {
             const Icon = icons[i] ?? Bot;
             return (
               <Reveal key={pillar.title} delay={200 + i * 90}>
-                <div className="border-l-2 border-[var(--color-border-strong)] pl-6">
-                  <Icon size={20} className="text-[var(--color-accent)]" />
+                <div className="group border-l-2 border-[var(--color-border-strong)] pl-6 transition-colors duration-200 hover:border-[var(--color-accent)]">
+                  <Icon size={20} className="text-[var(--color-accent)] transition-transform duration-200 group-hover:scale-110" />
                   <h3 className="mt-4 text-base font-semibold text-[var(--color-text)]">
                     {pillar.title}
                   </h3>

@@ -46,7 +46,7 @@ export function ContactCTA() {
             <Reveal delay={140}>
               <p className="mt-5 max-w-md text-[var(--color-text-muted)]">
                 Whether you're running a business, exploring a partnership,
-                considering an investment or want to help build what's
+                considering an investment, or want to help build what's
                 next -- we read every message and respond directly.
               </p>
             </Reveal>
@@ -95,7 +95,7 @@ export function ContactCTA() {
                 />
                 <Button type="submit" className="mt-2 w-fit">
                   Send message
-                  <ArrowRight size={16} />
+                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                 </Button>
               </form>
             )}

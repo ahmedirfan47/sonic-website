@@ -21,7 +21,7 @@ export function Hero() {
       <Container className="relative grid gap-14 md:grid-cols-[1.1fr_0.9fr] md:items-center">
         <div>
           <Reveal>
-            <Badge>Intelligent business infrastructure</Badge>
+            <Badge pulse>Technology · AI · Growth Strategy</Badge>
           </Reveal>
 
           <Reveal delay={80}>
@@ -32,8 +32,8 @@ export function Hero() {
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-[var(--color-text-muted)]">
-              Sonic builds AI-operated systems for businesses too complex to
-              run on spreadsheets and too fast-moving to run on memory.
+              Sonic combines technology, AI, and business strategy to help
+              businesses build, automate, and grow -- in any industry.
               Salesman, our first product, does this for wholesale
               distribution across the GCC.
             </p>
@@ -42,8 +42,8 @@ export function Hero() {
           <Reveal delay={240}>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Button as="a" href="/#contact">
-                Contact Us
-                <ArrowRight size={16} />
+                Talk to Sonic
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Button>
               <Button as="a" href="/products" variant="ghost">
                 Explore our products
@@ -53,7 +53,9 @@ export function Hero() {
         </div>
 
         <Reveal delay={200} className="hidden md:block">
-          <SignalGraphic className="w-full max-w-md text-[var(--color-accent)]" />
+          <div className="float-slow">
+            <SignalGraphic className="w-full max-w-md text-[var(--color-accent)]" />
+          </div>
         </Reveal>
       </Container>
     </section>

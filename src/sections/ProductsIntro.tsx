@@ -6,12 +6,6 @@ import { Reveal } from "../components/ui/Reveal";
 import { Badge } from "../components/ui/Badge";
 import { flagshipProduct } from "../data/products";
 
-/**
- * Brief, clearly-labeled introduction to Sonic's product line on the
- * homepage. Deliberately short -- the full product story lives on
- * /products and each product's own page, keeping this section from
- * competing with the company narrative around it.
- */
 export function ProductsIntro() {
   const p = flagshipProduct;
 
@@ -21,7 +15,7 @@ export function ProductsIntro() {
         <Reveal>
           <Eyebrow>Sonic's Products</Eyebrow>
         </Reveal>
-             <Reveal delay={80}>
+        <Reveal delay={80}>
           <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-[var(--color-text)] md:text-4xl">
             The first application of Sonic's infrastructure.
           </h2>
@@ -43,16 +37,16 @@ export function ProductsIntro() {
             <Reveal delay={260}>
               <Link
                 to={`/${p.slug}`}
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-accent)] hover:underline"
+                className="group mt-6 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-accent)] hover:underline"
               >
                 Explore {p.name}
-                <ArrowRight size={15} />
+                <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </Reveal>
           </div>
 
           <Reveal delay={220} className="w-full md:max-w-sm">
-            <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+            <div className="card-hover rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
               <div className="eyebrow mb-4">{p.industry}</div>
               <ul className="space-y-3">
                 {p.capabilities.slice(0, 3).map((cap) => (
@@ -69,10 +63,10 @@ export function ProductsIntro() {
         <Reveal delay={300}>
           <Link
             to="/products"
-            className="mt-10 inline-flex items-center gap-2 text-sm text-[var(--color-text-dim)] hover:text-[var(--color-text)]"
+            className="group mt-10 inline-flex items-center gap-2 text-sm text-[var(--color-text-dim)] hover:text-[var(--color-text)]"
           >
             See all Sonic products
-            <ArrowRight size={14} />
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </Reveal>
       </Container>

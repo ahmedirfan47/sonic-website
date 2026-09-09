@@ -1,7 +1,7 @@
 import { Container } from "../components/ui/Container";
 import { Section, Eyebrow } from "../components/ui/Section";
 import { Reveal } from "../components/ui/Reveal";
-import { industries, whyGccMena } from "../data/company";
+import { industries, industriesIntro, whyGccMena } from "../data/company";
 
 export function IndustriesMarket() {
   return (
@@ -12,15 +12,18 @@ export function IndustriesMarket() {
         </Reveal>
         <Reveal delay={80}>
           <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-[var(--color-text)] md:text-4xl">
-            Starting with distribution. Expanding across operational complexity.
+            Not limited to one industry.
           </h2>
+        </Reveal>
+        <Reveal delay={140}>
+          <p className="mt-5 max-w-xl text-[var(--color-text-muted)]">{industriesIntro}</p>
         </Reveal>
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {industries.map((ind, i) => (
             <Reveal key={ind.name} delay={140 + i * 80}>
               <div
-                className={`rounded-2xl border p-6 ${
+                className={`card-hover rounded-2xl border p-6 ${
                   ind.status === "current"
                     ? "border-[var(--color-accent)]/40 bg-[var(--color-accent-dim)]"
                     : "border-[var(--color-border)] bg-[var(--color-surface)]"
@@ -31,7 +34,7 @@ export function IndustriesMarket() {
                     {ind.name}
                   </h3>
                   <span className="text-xs text-[var(--color-text-dim)]">
-                    {ind.status === "current" ? "Current focus" : "Expansion path"}
+                    {ind.status === "current" ? "Proven today" : "Same approach applies"}
                   </span>
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">

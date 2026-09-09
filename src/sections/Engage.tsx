@@ -26,7 +26,7 @@ export function Engage() {
               <Reveal key={path.audience} delay={140 + i * 80}>
                 <a
                   href="/#contact"
-                  className="group flex h-full flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-colors hover:border-[var(--color-accent)]/50"
+                  className="card-hover group flex h-full flex-col rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 hover:border-[var(--color-accent)]/50"
                 >
                   <Icon size={20} className="text-[var(--color-accent)]" />
                   <div className="eyebrow mt-4 mb-1">{path.audience}</div>
