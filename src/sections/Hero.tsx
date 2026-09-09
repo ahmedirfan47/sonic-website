@@ -26,7 +26,7 @@ export function Hero() {
 
           <Reveal delay={80}>
             <h1 className="mt-6 max-w-xl text-4xl font-bold leading-[1.08] tracking-tight text-[var(--color-text)] md:text-6xl">
-              Sonic builds intelligent infrastructure for operationally complex businesses
+              Transforming Business Through AI Technology
             </h1>
           </Reveal>
 
