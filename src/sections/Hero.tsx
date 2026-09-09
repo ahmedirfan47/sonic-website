@@ -26,14 +26,14 @@ export function Hero() {
 
           <Reveal delay={80}>
             <h1 className="mt-6 max-w-xl text-4xl font-bold leading-[1.08] tracking-tight text-[var(--color-text)] md:text-6xl">
-              Software that runs the operation. Not software that reports on it.
+              Sonic builds intelligent infrastructure for operationally complex businesses
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-[var(--color-text-muted)]">
-              Sonic combines technology, AI, and business strategy to help
-              businesses build, automate, and grow -- in any industry.
+              Sonic combines technology, AI and business strategy to help
+              businesses build, automate and grow -- in any industry.
               Salesman, our first product, does this for wholesale
               distribution across the GCC.
             </p>
